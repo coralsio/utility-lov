@@ -1,0 +1,13 @@
+{
+    "code": "corals-utility-listOfValue",
+    "name": "Utility List Of Values",
+    "author": "Corals",
+    "type": "module",
+    "description": "Utility List Of Values",
+    "namespace": "Corals\\Modules\\Utility\\ListOfValue",
+    "provider": "UtilityListOfValueServiceProvider",
+    "version": "1.0",
+    "load_order": "0",
+    "folder": "utility-listOfValue",
+    "icon": "fa fa-list"
+}
