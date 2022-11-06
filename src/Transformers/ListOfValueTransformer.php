@@ -10,7 +10,7 @@ class ListOfValueTransformer extends BaseTransformer
 {
     public function __construct($extras = [])
     {
-        $this->resource_url = config('utility_list_of_value.models.listOfValue.resource_url');
+        $this->resource_url = config('utility-lov.models.listOfValue.resource_url');
 
         parent::__construct($extras);
     }

@@ -20,7 +20,7 @@ class ListOfValue extends BaseModel implements HasMedia
      *  Model configuration.
      * @var string
      */
-    public $config = 'utility_list_of_value.models.listOfValue';
+    public $config = 'utility-lov.models.listOfValue';
 
     protected $table = 'utility_list_of_values';
 

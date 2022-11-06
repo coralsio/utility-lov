@@ -19,12 +19,12 @@ class ListOfValuesController extends BaseController
     public function __construct(ListOfValueService $listOfValueService)
     {
         $this->listOfValueService = $listOfValueService;
-        $this->resource_url = config('utility_list_of_value.models.listOfValue.resource_url');
+        $this->resource_url = config('utility-lov.models.listOfValue.resource_url');
 
         $this->resource_model = new ListOfValue();
 
-        $this->title = 'utility_lov::module.listOfValue.title';
-        $this->title_singular = 'utility_lov::module.listOfValue.title_singular';
+        $this->title = 'utility-lov::module.listOfValue.title';
+        $this->title_singular = 'utility-lov::module.listOfValue.title_singular';
 
         parent::__construct();
     }
@@ -36,7 +36,7 @@ class ListOfValuesController extends BaseController
      */
     public function index(ListOfValueRequest $request, ListOfValuesDataTable $dataTable)
     {
-        return $dataTable->render('utility_lov::index');
+        return $dataTable->render('utility-lov::index');
     }
 
     /**
@@ -51,7 +51,7 @@ class ListOfValuesController extends BaseController
             'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])
         ]);
 
-        return view('utility_lov::create_edit')->with(compact('listOfValue'));
+        return view('utility-lov::create_edit')->with(compact('listOfValue'));
     }
 
     /**
@@ -98,7 +98,7 @@ class ListOfValuesController extends BaseController
             'title_singular' => trans('Corals::labels.update_title', ['title' => $listOfValue->code])
         ]);
 
-        return view('utility_lov::create_edit')->with(compact('listOfValue'));
+        return view('utility-lov::create_edit')->with(compact('listOfValue'));
     }
 
     /**
@@ -155,13 +155,13 @@ class ListOfValuesController extends BaseController
                             $listOfValue->save();
                             $message = [
                                 'level' => 'success',
-                                'message' => trans('utility_lov::attributes.update_status',
+                                'message' => trans('utility-lov::attributes.update_status',
                                     ['item' => $this->title_singular])
                             ];
                         } else {
                             $message = [
                                 'level' => 'error',
-                                'message' => trans('utility_lov::attributes.no_permission',
+                                'message' => trans('utility-lov::attributes.no_permission',
                                     ['item' => $this->title_singular])
                             ];
                         }
@@ -178,13 +178,13 @@ class ListOfValuesController extends BaseController
                             $listOfValue->save();
                             $message = [
                                 'level' => 'success',
-                                'message' => trans('utility_lov::attributes.update_status',
+                                'message' => trans('utility-lov::attributes.update_status',
                                     ['item' => $this->title_singular])
                             ];
                         } else {
                             $message = [
                                 'level' => 'error',
-                                'message' => trans('utility_lov::attributes.no_permission',
+                                'message' => trans('utility-lov::attributes.no_permission',
                                     ['item' => $this->title_singular])
                             ];
                         }

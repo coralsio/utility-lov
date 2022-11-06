@@ -18,16 +18,16 @@
         {!! CoralsForm::openForm($listOfValue) !!}
         <div class="row">
             <div class="col-md-4">
-                {!! CoralsForm::text('code','utility_lov::attributes.listOfValue.code', false, $listOfValue->code, ['help_text' => 'Utility::attributes.listOfValue.code_help']) !!}
-                {!! CoralsForm::text('label',trans('utility_lov::attributes.listOfValue.label'), false, $listOfValue->label) !!}
-                {!! CoralsForm::textarea('value','utility_lov::attributes.listOfValue.value', true) !!}
-                {!! CoralsForm::number('display_order','utility_lov::attributes.listOfValue.display_order') !!}
+                {!! CoralsForm::text('code','utility-lov::attributes.listOfValue.code', false, $listOfValue->code, ['help_text' => 'utility-lov::attributes.listOfValue.code_help']) !!}
+                {!! CoralsForm::text('label',trans('utility-lov::attributes.listOfValue.label'), false, $listOfValue->label) !!}
+                {!! CoralsForm::textarea('value','utility-lov::attributes.listOfValue.value', true) !!}
+                {!! CoralsForm::number('display_order','utility-lov::attributes.listOfValue.display_order') !!}
             </div>
             <div class="col-md-4">
-                {!! CoralsForm::select('module','Utility::attributes.listOfValue.module', \Utility::getUtilityModules(), false, null, [], 'select2') !!}
-                {!! CoralsForm::select('parent_id','Utility::attributes.listOfValue.parent', \ListOfValues::getParents(), false, null, [], 'select2') !!}
+                {!! CoralsForm::select('module','utility-lov::attributes.listOfValue.module', \Utility::getUtilityModules(), false, null, [], 'select2') !!}
+                {!! CoralsForm::select('parent_id','utility-lov::attributes.listOfValue.parent', \ListOfValues::getParents(), false, null, [], 'select2') !!}
                 {!! CoralsForm::radio('status','Corals::attributes.status', true, trans('Corals::attributes.status_options')) !!}
-                {!! CoralsForm::checkbox('hidden','utility_lov::attributes.listOfValue.hidden', $listOfValue->hidden, true) !!}
+                {!! CoralsForm::checkbox('hidden','utility-lov::attributes.listOfValue.hidden', $listOfValue->hidden, true) !!}
                 @include("Corals::key_value",[
                         "label"=>["key"=> trans("Corals::labels.key"), "value"=>trans("Corals::labels.value")],
                         "name"=>"properties",
@@ -49,10 +49,10 @@
                          alt="Thumbnail"/>
                     <br/>
                     @if(isset($hasMedia))
-                        {!! CoralsForm::checkbox('clear', 'Utility::attributes.listOfValue.clear') !!}
+                        {!! CoralsForm::checkbox('clear', 'utility-lov::attributes.listOfValue.clear') !!}
                     @endif
                 @endif
-                {!! CoralsForm::file('thumbnail', 'utility_lov::attributes.listOfValue.thumbnail') !!}
+                {!! CoralsForm::file('thumbnail', 'utility-lov::attributes.listOfValue.thumbnail') !!}
 
             </div>
         </div>

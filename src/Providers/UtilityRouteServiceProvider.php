@@ -27,7 +27,7 @@ class UtilityRouteServiceProvider extends ServiceProvider
         parent::boot();
 
         if (class_exists('Breadcrumbs')) {
-            require __DIR__ . '/../routes/utility_list_of_value_breadcrumbs.php';
+            require __DIR__ . '/../routes/utility_lov_breadcrumbs.php';
         }
     }
 

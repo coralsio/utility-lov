@@ -18,7 +18,7 @@ class ListOfValuesDataTable extends BaseDataTable
      */
     public function dataTable($query)
     {
-        $this->setResourceUrl(config('utility_list_of_value.models.listOfValue.resource_url'));
+        $this->setResourceUrl(config('utility-lov.models.listOfValue.resource_url'));
 
         $dataTable = new EloquentDataTable($query);
 
@@ -44,17 +44,17 @@ class ListOfValuesDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'code' => ['title' => trans('utility_lov::attributes.listOfValue.code')],
-            'value' => ['title' => trans('utility_lov::attributes.listOfValue.value')],
-            'label' => ['title' => trans('utility_lov::attributes.listOfValue.label')],
+            'code' => ['title' => trans('utility-lov::attributes.listOfValue.code')],
+            'value' => ['title' => trans('utility-lov::attributes.listOfValue.value')],
+            'label' => ['title' => trans('utility-lov::attributes.listOfValue.label')],
             'parent' => [
-                'title' => trans('utility_lov::attributes.listOfValue.parent'),
+                'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'orderable' => false,
                 'searchable' => false
             ],
-            'module' => ['title' => trans('utility_lov::attributes.listOfValue.module')],
+            'module' => ['title' => trans('utility-lov::attributes.listOfValue.module')],
             'status' => ['title' => trans('Corals::attributes.status')],
-            'hidden' => ['title' => trans('utility_lov::attributes.listOfValue.hidden')],
+            'hidden' => ['title' => trans('utility-lov::attributes.listOfValue.hidden')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];
@@ -64,28 +64,28 @@ class ListOfValuesDataTable extends BaseDataTable
     {
         return [
             'code' => [
-                'title' => trans('utility_lov::attributes.listOfValue.code'),
+                'title' => trans('utility-lov::attributes.listOfValue.code'),
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
                 'active' => true
             ],
             'label' => [
-                'title' => trans('utility_lov::attributes.listOfValue.label'),
+                'title' => trans('utility-lov::attributes.listOfValue.label'),
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
                 'active' => true
             ],
             'value' => [
-                'title' => trans('utility_lov::attributes.listOfValue.value'),
+                'title' => trans('utility-lov::attributes.listOfValue.value'),
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
                 'active' => true
             ],
             'parent_id' => [
-                'title' => trans('utility_lov::attributes.listOfValue.parent'),
+                'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'class' => 'col-md-2',
                 'type' => 'select',
                 'options' => ListOfValues::getParents(),
@@ -117,7 +117,7 @@ class ListOfValuesDataTable extends BaseDataTable
 
     protected function getOptions()
     {
-        $url = url(config('utility_list_of_value.models.listOfValue.resource_url'));
+        $url = url(config('utility-lov.models.listOfValue.resource_url'));
         return ['resource_url' => $url];
     }
 }

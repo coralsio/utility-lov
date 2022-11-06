@@ -18,11 +18,11 @@ class UtilityListOfValueServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'utility-lov');
 
         $this->mergeConfigFrom(
-            __DIR__ . '/config/utility_list_of_value.php',
+            __DIR__ . '/config/utility-lov.php',
             'utility-list_of_value'
         );
         $this->publishes([
-            __DIR__ . '/config/utility-list_of_value.php' => config_path('utility_list_of_value.php'),
+            __DIR__ . '/config/utility-lov.php' => config_path('utility-lov.php'),
             __DIR__ . '/resources/views' => resource_path('resources/views/vendor/utility-lov'),
         ]);
 
