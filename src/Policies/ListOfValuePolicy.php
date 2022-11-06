@@ -19,6 +19,7 @@ class ListOfValuePolicy extends BasePolicy
         if ($user->can('Utility::listOfValue.view')) {
             return true;
         }
+
         return false;
     }
 
@@ -41,6 +42,7 @@ class ListOfValuePolicy extends BasePolicy
         if ($user->can('Utility::listOfValue.update')) {
             return true;
         }
+
         return false;
     }
 
@@ -54,6 +56,7 @@ class ListOfValuePolicy extends BasePolicy
         if ($user->can('Utility::listOfValue.delete')) {
             return true;
         }
+
         return false;
     }
 }

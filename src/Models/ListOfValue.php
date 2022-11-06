@@ -14,7 +14,12 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 class ListOfValue extends BaseModel implements HasMedia
 {
-    use PresentableTrait, LogsActivity, ModelPropertiesTrait, ModelUniqueCode, Cachable,InteractsWithMedia;
+    use PresentableTrait;
+    use LogsActivity;
+    use ModelPropertiesTrait;
+    use ModelUniqueCode;
+    use Cachable;
+    use InteractsWithMedia;
 
     /**
      *  Model configuration.
@@ -30,7 +35,6 @@ class ListOfValue extends BaseModel implements HasMedia
 
     public $guarded = ['id'];
     public $mediaCollectionName = 'utility-listOfvalue-thumbnail';
-
 
     public function scopeWithModule(Builder $query, string $module = null): Builder
     {

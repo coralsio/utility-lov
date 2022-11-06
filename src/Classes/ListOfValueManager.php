@@ -17,7 +17,7 @@ class ListOfValueManager
     {
         $listOfValues = ListOfValue::query()->whereNull('parent_id');
 
-        if (!is_null($module)) {
+        if (! is_null($module)) {
             $listOfValues = $listOfValues->withModule($module);
         }
 
@@ -126,11 +126,9 @@ class ListOfValueManager
         }
     }
 
-
     public function insertListOfValuesChildren($parent, $options)
     {
         foreach ($options as $code => $attributes) {
-
             if (is_array($attributes)) {
                 $label = data_get($attributes, 'label');
                 $value = data_get($attributes, 'value', $code);

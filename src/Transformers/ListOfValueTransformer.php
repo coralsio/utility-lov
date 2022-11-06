@@ -34,7 +34,7 @@ class ListOfValueTransformer extends BaseTransformer
             'hidden' => yesNoFormatter($listOfValue->hidden),
             'created_at' => format_date($listOfValue->created_at),
             'updated_at' => format_date($listOfValue->updated_at),
-            'action' => $this->actions($listOfValue)
+            'action' => $this->actions($listOfValue),
         ];
 
         return parent::transformResponse($transformedArray);
