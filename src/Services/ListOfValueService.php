@@ -8,14 +8,13 @@ use Illuminate\Http\Request;
 class ListOfValueService extends BaseServiceClass
 {
     protected $excludedRequestParams = ['thumbnail', 'clear'];
+
     /**
      * @param Request $request
      * @param $additionalData
      */
     public function preStoreUpdate(Request $request, &$additionalData)
     {
-
-
         $listofvalue = $this->model;
 
 
@@ -23,7 +22,7 @@ class ListOfValueService extends BaseServiceClass
             $listofvalue->clearMediaCollection($listofvalue->mediaCollectionName);
         }
 
-        if ($request->hasFile('thumbnail') && !$request->has('clear')) {
+        if ($request->hasFile('thumbnail') && ! $request->has('clear')) {
             $listofvalue->addMedia($request->file('thumbnail'))
                 ->withCustomProperties(['root' => 'user_' . user()->hashed_id])
                 ->toMediaCollection($listofvalue->mediaCollectionName);

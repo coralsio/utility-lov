@@ -43,7 +43,6 @@ class UtilityListOfValueTest extends TestCase
 
         foreach ($modules as $module => $code) {
             if (Modules::isModuleActive($code)) {
-
                 $response = $this->post('utilities/list-of-values', [
                     'code' => null,
                     'value' => 'parent',

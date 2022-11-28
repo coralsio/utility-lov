@@ -6,7 +6,6 @@ use Corals\Modules\Utility\ListOfValue\Facades\ListOfValues;
 use Corals\Modules\Utility\ListOfValue\Providers\UtilityAuthServiceProvider;
 use Corals\Modules\Utility\ListOfValue\Providers\UtilityRouteServiceProvider;
 use Corals\Settings\Facades\Modules;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
@@ -39,7 +38,6 @@ class UtilityListOfValueServiceProvider extends ServiceProvider
             $loader->alias('ListOfValues', ListOfValues::class);
         });
     }
-
 
     protected function registerModulesPackages()
     {

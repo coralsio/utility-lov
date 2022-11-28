@@ -3,7 +3,6 @@
 namespace Corals\Modules\Utility\ListOfValue\database\seeds;
 
 use Carbon\Carbon;
-use Corals\User\Models\Role;
 use Illuminate\Database\Seeder;
 
 class UtilityListOfValuePermissionsDatabaseSeeder extends Seeder
@@ -48,6 +47,5 @@ class UtilityListOfValuePermissionsDatabaseSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
         ]);
-
     }
 }

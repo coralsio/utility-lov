@@ -43,7 +43,7 @@ class ListOfValueRequest extends BaseRequest
 
         if ($this->isStore()) {
             $rules = array_merge($rules, [
-                'code' => 'nullable|max:191|unique:utility_list_of_values,code'
+                'code' => 'nullable|max:191|unique:utility_list_of_values,code',
             ]);
         }
 

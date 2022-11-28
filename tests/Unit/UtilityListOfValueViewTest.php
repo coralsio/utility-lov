@@ -39,7 +39,7 @@ class UtilityListOfValueViewTest extends TestCase
 
         $response->assertStatus(200)->assertViewIs('utility-lov::create_edit');
     }
-    
+
     public function test_utility_list_of_value_bulk_action()
     {
         $response = $this->post('utilities/list-of-values/bulk-action', [

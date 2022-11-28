@@ -48,7 +48,7 @@ class ListOfValuesController extends BaseController
         $listOfValue = new ListOfValue();
 
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])
+            'title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular]),
         ]);
 
         return view('utility-lov::create_edit')->with(compact('listOfValue'));
@@ -95,7 +95,7 @@ class ListOfValuesController extends BaseController
     public function edit(ListOfValueRequest $request, ListOfValue $listOfValue)
     {
         $this->setViewSharedData([
-            'title_singular' => trans('Corals::labels.update_title', ['title' => $listOfValue->code])
+            'title_singular' => trans('Corals::labels.update_title', ['title' => $listOfValue->code]),
         ]);
 
         return view('utility-lov::create_edit')->with(compact('listOfValue'));
@@ -124,7 +124,6 @@ class ListOfValuesController extends BaseController
      * @param ListOfValue $listOfValue
      * @return \Illuminate\Http\JsonResponse
      */
-
     public function bulkAction(BulkRequest $request)
     {
         try {
@@ -135,60 +134,71 @@ class ListOfValuesController extends BaseController
                 case 'delete':
                     foreach ($selection as $selection_id) {
                         $listOfValue = ListOfValue::findByHash($selection_id);
-                        $listOfValue_request = new ListOfValueRequest;
+                        $listOfValue_request = new ListOfValueRequest();
                         $listOfValue_request->setMethod('DELETE');
                         $this->destroy($listOfValue_request, $listOfValue);
                     }
                     $message = [
                         'level' => 'success',
-                        'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular])
+                        'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular]),
                     ];
+
                     break;
 
-                case 'active' :
+                case 'active':
                     foreach ($selection as $selection_id) {
                         $listOfValue = ListOfValue::findByHash($selection_id);
                         if (user()->can('Utility::listOfValue.update')) {
                             $listOfValue->update([
-                                'status' => 'active'
+                                'status' => 'active',
                             ]);
                             $listOfValue->save();
                             $message = [
                                 'level' => 'success',
-                                'message' => trans('utility-lov::attributes.update_status',
-                                    ['item' => $this->title_singular])
+                                'message' => trans(
+                                    'utility-lov::attributes.update_status',
+                                    ['item' => $this->title_singular]
+                                ),
                             ];
                         } else {
                             $message = [
                                 'level' => 'error',
-                                'message' => trans('utility-lov::attributes.no_permission',
-                                    ['item' => $this->title_singular])
+                                'message' => trans(
+                                    'utility-lov::attributes.no_permission',
+                                    ['item' => $this->title_singular]
+                                ),
                             ];
                         }
                     }
+
                     break;
 
-                case 'inActive' :
+                case 'inActive':
                     foreach ($selection as $selection_id) {
                         $listOfValue = ListOfValue::findByHash($selection_id);
                         if (user()->can('Utility::listOfValue.update')) {
                             $listOfValue->update([
-                                'status' => 'inactive'
+                                'status' => 'inactive',
                             ]);
                             $listOfValue->save();
                             $message = [
                                 'level' => 'success',
-                                'message' => trans('utility-lov::attributes.update_status',
-                                    ['item' => $this->title_singular])
+                                'message' => trans(
+                                    'utility-lov::attributes.update_status',
+                                    ['item' => $this->title_singular]
+                                ),
                             ];
                         } else {
                             $message = [
                                 'level' => 'error',
-                                'message' => trans('utility-lov::attributes.no_permission',
-                                    ['item' => $this->title_singular])
+                                'message' => trans(
+                                    'utility-lov::attributes.no_permission',
+                                    ['item' => $this->title_singular]
+                                ),
                             ];
                         }
                     }
+
                     break;
             }
         } catch (\Exception $exception) {
@@ -206,7 +216,7 @@ class ListOfValuesController extends BaseController
 
             $message = [
                 'level' => 'success',
-                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular])
+                'message' => trans('Corals::messages.success.deleted', ['item' => $this->title_singular]),
             ];
         } catch (\Exception $exception) {
             log_exception($exception, ListOfValue::class, 'destroy');
@@ -226,6 +236,7 @@ class ListOfValuesController extends BaseController
             return ListOfValues::get(current($request->all()));
         } catch (\Exception $exception) {
             $message = ['level' => 'error', 'message' => $exception->getMessage()];
+
             return response()->json($message);
         }
     }

@@ -50,7 +50,7 @@ class ListOfValuesDataTable extends BaseDataTable
             'parent' => [
                 'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'orderable' => false,
-                'searchable' => false
+                'searchable' => false,
             ],
             'module' => ['title' => trans('utility-lov::attributes.listOfValue.module')],
             'status' => ['title' => trans('Corals::attributes.status')],
@@ -68,28 +68,28 @@ class ListOfValuesDataTable extends BaseDataTable
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'label' => [
                 'title' => trans('utility-lov::attributes.listOfValue.label'),
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'value' => [
                 'title' => trans('utility-lov::attributes.listOfValue.value'),
                 'class' => 'col-md-3',
                 'type' => 'text',
                 'condition' => 'like',
-                'active' => true
+                'active' => true,
             ],
             'parent_id' => [
                 'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'class' => 'col-md-2',
                 'type' => 'select',
                 'options' => ListOfValues::getParents(),
-                'active' => true
+                'active' => true,
             ],
         ];
     }
@@ -100,24 +100,25 @@ class ListOfValuesDataTable extends BaseDataTable
             'delete' => [
                 'title' => trans('Corals::labels.delete'),
                 'permission' => 'Utility::listOfValue.delete',
-                'confirmation' => trans('Corals::labels.confirmation.title')
+                'confirmation' => trans('Corals::labels.confirmation.title'),
             ],
             'active' => [
                 'title' => '<i class="fa fa-check-circle"></i> ' . trans('Corals::attributes.status_options.active'),
                 'permission' => 'Utility::listOfValue.update',
-                'confirmation' => trans('Corals::labels.confirmation.title')
+                'confirmation' => trans('Corals::labels.confirmation.title'),
             ],
             'inActive' => [
                 'title' => '<i class="fa fa-check-circle-o"></i> ' . trans('Corals::attributes.status_options.inactive'),
                 'permission' => 'Utility::listOfValue.update',
-                'confirmation' => trans('Corals::labels.confirmation.title')
-            ]
+                'confirmation' => trans('Corals::labels.confirmation.title'),
+            ],
         ];
     }
 
     protected function getOptions()
     {
         $url = url(config('utility-lov.models.listOfValue.resource_url'));
+
         return ['resource_url' => $url];
     }
 }
