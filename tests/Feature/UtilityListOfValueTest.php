@@ -61,7 +61,7 @@ class UtilityListOfValueTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_utility_utility_list_of_value_edit()
+    public function test_utility_list_of_value_edit()
     {
         if ($this->listOfValue) {
             $response = $this->get('utilities/list-of-values/' . $this->listOfValue->hashed_id . '/edit');
@@ -71,7 +71,7 @@ class UtilityListOfValueTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_utility_rating_update()
+    public function test_utility_list_of_value_update()
     {
         if ($this->listOfValue) {
             $response = $this->put('utilities/list-of-values/' . $this->listOfValue->hashed_id, [
@@ -88,7 +88,7 @@ class UtilityListOfValueTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_utility_rating_delete()
+    public function test_utility_list_of_value_delete()
     {
         if ($this->listOfValue) {
             $response = $this->delete('utilities/list-of-values/' . $this->listOfValue->hashed_id);
