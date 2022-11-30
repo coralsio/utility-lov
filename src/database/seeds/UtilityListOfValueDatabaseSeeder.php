@@ -21,6 +21,5 @@ class UtilityListOfValueDatabaseSeeder extends Seeder
     public function rollback()
     {
         Permission::where('name', 'like', 'Utility::listOfValue%')->delete();
-        Permission::where('name', 'Administrations::admin.utility_listOfValue')->delete();
     }
 }

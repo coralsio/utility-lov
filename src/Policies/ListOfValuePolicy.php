@@ -8,7 +8,7 @@ use Corals\User\Models\User;
 
 class ListOfValuePolicy extends BasePolicy
 {
-    protected $administrationPermission = 'Administrations::admin.utility_listOfValue';
+    protected $administrationPermission = 'Administrations::admin.utility';
 
     /**
      * @param User $user

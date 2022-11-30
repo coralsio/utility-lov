@@ -53,7 +53,17 @@ class UtilityListOfValueTest extends TestCase
 
                 $this->listOfValue = ListOfValue::query()->first();
 
-                $response->assertRedirect('utilities/list-of-values');
+                $response->assertDontSee('The given data was invalid')
+                    ->assertRedirect('utilities/list-of-values');
+
+                $this->assertDatabaseHas('utility_list_of_values', [
+                    'code' => $this->listOfValue->code,
+                    'value' => $this->listOfValue->value,
+                    'display_order' => $this->listOfValue->display_order,
+                    'module' => $this->listOfValue->module,
+                    'parent_id' => $this->listOfValue->parent_id,
+                    'status' => $this->listOfValue->status,
+                ]);
             }
         }
 
@@ -62,6 +72,8 @@ class UtilityListOfValueTest extends TestCase
 
     public function test_utility_list_of_value_edit()
     {
+        $this->test_utility_list_of_value_store();
+        
         if ($this->listOfValue) {
             $response = $this->get('utilities/list-of-values/' . $this->listOfValue->hashed_id . '/edit');
 
@@ -72,6 +84,8 @@ class UtilityListOfValueTest extends TestCase
 
     public function test_utility_list_of_value_update()
     {
+        $this->test_utility_list_of_value_store();
+
         if ($this->listOfValue) {
             $response = $this->put('utilities/list-of-values/' . $this->listOfValue->hashed_id, [
                 'code' => $this->listOfValue->code,
@@ -82,17 +96,38 @@ class UtilityListOfValueTest extends TestCase
                 'status' => $this->listOfValue->status,]);
 
 
-            $response->assertStatus(200)->assertRedirect('utilities/list-of-values');
+            $response->assertRedirect('utilities/list-of-values');
+            
+            $this->assertDatabaseHas('utility_list_of_values', [
+                'code' => $this->listOfValue->code,
+                'value' => 'child',
+                'display_order' => $this->listOfValue->display_order,
+                'module' => $this->listOfValue->module,
+                'parent_id' => $this->listOfValue->parent_id,
+                'status' => $this->listOfValue->status,
+            ]);
         }
         $this->assertTrue(true);
     }
 
     public function test_utility_list_of_value_delete()
     {
+        $this->test_utility_list_of_value_store();
+
         if ($this->listOfValue) {
             $response = $this->delete('utilities/list-of-values/' . $this->listOfValue->hashed_id);
 
             $response->assertStatus(200)->assertSeeText('List Of Value has been deleted successfully.');
+
+            $this->isSoftDeletableModel(ListOfValue::class);
+            $this->assertDatabaseMissing('utility_list_of_values', [
+                'code' => $this->listOfValue->code,
+                'value' => $this->listOfValue->value,
+                'display_order' => $this->listOfValue->display_order,
+                'module' => $this->listOfValue->module,
+                'parent_id' => $this->listOfValue->parent_id,
+                'status' => $this->listOfValue->status,
+            ]);
         }
         $this->assertTrue(true);
     }

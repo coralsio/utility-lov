@@ -15,12 +15,6 @@ class UtilityListOfValuePermissionsDatabaseSeeder extends Seeder
     public function run()
     {
         \DB::table('permissions')->insert([
-            [
-                'name' => 'Administrations::admin.utility_listOfValue',
-                'guard_name' => config('auth.defaults.guard'),
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
             //List Of Values
             [
                 'name' => 'Utility::listOfValue.view',
