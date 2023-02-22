@@ -73,7 +73,7 @@ class UtilityListOfValueTest extends TestCase
     public function test_utility_list_of_value_edit()
     {
         $this->test_utility_list_of_value_store();
-        
+
         if ($this->listOfValue) {
             $response = $this->get('utilities/list-of-values/' . $this->listOfValue->hashed_id . '/edit');
 
@@ -97,7 +97,7 @@ class UtilityListOfValueTest extends TestCase
 
 
             $response->assertRedirect('utilities/list-of-values');
-            
+
             $this->assertDatabaseHas('utility_list_of_values', [
                 'code' => $this->listOfValue->code,
                 'value' => 'child',
