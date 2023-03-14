@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Corals\Settings\Facades\Modules;
 use Corals\User\Models\Role;
 use Corals\User\Models\User;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;

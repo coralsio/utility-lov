@@ -3,10 +3,10 @@
 namespace Corals\Utility\ListOfValue;
 
 use Corals\Foundation\Providers\BasePackageServiceProvider;
+use Corals\Settings\Facades\Modules;
 use Corals\Utility\ListOfValue\Facades\ListOfValues;
 use Corals\Utility\ListOfValue\Providers\UtilityAuthServiceProvider;
 use Corals\Utility\ListOfValue\Providers\UtilityRouteServiceProvider;
-use Corals\Settings\Facades\Modules;
 use Illuminate\Foundation\AliasLoader;
 
 class UtilityListOfValueServiceProvider extends BasePackageServiceProvider

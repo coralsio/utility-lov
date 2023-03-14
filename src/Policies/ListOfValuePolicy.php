@@ -3,8 +3,8 @@
 namespace Corals\Utility\ListOfValue\Policies;
 
 use Corals\Foundation\Policies\BasePolicy;
-use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Corals\User\Models\User;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 
 class ListOfValuePolicy extends BasePolicy
 {
