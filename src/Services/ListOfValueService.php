@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Services;
+namespace Corals\Utility\ListOfValue\Services;
 
 use Corals\Foundation\Services\BaseServiceClass;
 use Illuminate\Http\Request;

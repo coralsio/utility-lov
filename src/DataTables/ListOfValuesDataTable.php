@@ -1,11 +1,11 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\DataTables;
+namespace Corals\Utility\ListOfValue\DataTables;
 
 use Corals\Foundation\DataTables\BaseDataTable;
-use Corals\Modules\Utility\ListOfValue\Facades\ListOfValues;
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
-use Corals\Modules\Utility\ListOfValue\Transformers\ListOfValueTransformer;
+use Corals\Utility\ListOfValue\Facades\ListOfValues;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Transformers\ListOfValueTransformer;
 use Yajra\DataTables\EloquentDataTable;
 
 class ListOfValuesDataTable extends BaseDataTable

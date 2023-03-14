@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Transformers;
+namespace Corals\Utility\ListOfValue\Transformers;
 
 use Corals\Foundation\Transformers\BaseTransformer;
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Illuminate\Support\Str;
 
 class ListOfValueTransformer extends BaseTransformer

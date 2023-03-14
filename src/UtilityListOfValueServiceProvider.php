@@ -1,11 +1,11 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue;
+namespace Corals\Utility\ListOfValue;
 
 use Corals\Foundation\Providers\BasePackageServiceProvider;
-use Corals\Modules\Utility\ListOfValue\Facades\ListOfValues;
-use Corals\Modules\Utility\ListOfValue\Providers\UtilityAuthServiceProvider;
-use Corals\Modules\Utility\ListOfValue\Providers\UtilityRouteServiceProvider;
+use Corals\Utility\ListOfValue\Facades\ListOfValues;
+use Corals\Utility\ListOfValue\Providers\UtilityAuthServiceProvider;
+use Corals\Utility\ListOfValue\Providers\UtilityRouteServiceProvider;
 use Corals\Settings\Facades\Modules;
 use Illuminate\Foundation\AliasLoader;
 

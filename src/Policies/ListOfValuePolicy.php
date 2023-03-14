@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Policies;
+namespace Corals\Utility\ListOfValue\Policies;
 
 use Corals\Foundation\Policies\BasePolicy;
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Corals\User\Models\User;
 
 class ListOfValuePolicy extends BasePolicy

@@ -1,12 +1,12 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Facades;
+namespace Corals\Utility\ListOfValue\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class ListOfValues
- * @package Corals\Modules\Utility\Facades\ListOfValue
+ * @package Corals\Utility\Facades\ListOfValue
  * @method static getParents($module = null, $objects = false, $status = null)
  * @method static get($parentCode, $objects = false, $status = 'active', $useCode = true)
  * @method static getLOVByCode($code, $parentCode = null, $object = false, $default = null, $attribute = 'label')
@@ -20,6 +20,6 @@ class ListOfValues extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return \Corals\Modules\Utility\ListOfValue\Classes\ListOfValueManager::class;
+        return \Corals\Utility\ListOfValue\Classes\ListOfValueManager::class;
     }
 }

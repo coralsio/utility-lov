@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Corals\\Modules\\Utility\\ListOfValue\\": "src"
+            "Corals\\Utility\\ListOfValue\\": "src"
         }
     },
     "autoload-dev": {
@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Corals\\Modules\\Utility\\ListOfValue\\UtilityListOfValueServiceProvider"
+                "Corals\\Utility\\ListOfValue\\UtilityListOfValueServiceProvider"
             ]
         }
     },

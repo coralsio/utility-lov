@@ -4,7 +4,7 @@
     "author": "Corals",
     "type": "module",
     "description": "Utility List Of Values",
-    "namespace": "Corals\\Modules\\Utility\\ListOfValue",
+    "namespace": "Corals\\Utility\\ListOfValue",
     "provider": "UtilityListOfValueServiceProvider",
     "version": "1.0",
     "load_order": "0",

@@ -1,8 +1,8 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Classes;
+namespace Corals\Utility\ListOfValue\Classes;
 
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Illuminate\Support\Str;
 
 class ListOfValueManager

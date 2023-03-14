@@ -3,7 +3,7 @@
 return [
     'models' => [
         'listOfValue' => [
-            'presenter' => \Corals\Modules\Utility\ListOfValue\Transformers\ListOfValuePresenter::class,
+            'presenter' => \Corals\Utility\ListOfValue\Transformers\ListOfValuePresenter::class,
             'resource_url' => 'utilities/list-of-values',
             'actions' => [],
         ],

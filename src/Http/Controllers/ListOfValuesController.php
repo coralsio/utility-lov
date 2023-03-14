@@ -1,14 +1,14 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Http\Controllers;
+namespace Corals\Utility\ListOfValue\Http\Controllers;
 
 use Corals\Foundation\Http\Controllers\BaseController;
 use Corals\Foundation\Http\Requests\BulkRequest;
-use Corals\Modules\Utility\ListOfValue\DataTables\ListOfValuesDataTable;
-use Corals\Modules\Utility\ListOfValue\Facades\ListOfValues;
-use Corals\Modules\Utility\ListOfValue\Http\Requests\ListOfValueRequest;
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
-use Corals\Modules\Utility\ListOfValue\Services\ListOfValueService;
+use Corals\Utility\ListOfValue\DataTables\ListOfValuesDataTable;
+use Corals\Utility\ListOfValue\Facades\ListOfValues;
+use Corals\Utility\ListOfValue\Http\Requests\ListOfValueRequest;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Services\ListOfValueService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

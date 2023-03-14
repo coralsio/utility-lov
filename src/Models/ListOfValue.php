@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Models;
+namespace Corals\Utility\ListOfValue\Models;
 
 use Corals\Foundation\Models\BaseModel;
 use Corals\Foundation\Traits\Cache\Cachable;

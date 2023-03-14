@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Providers;
+namespace Corals\Utility\ListOfValue\Providers;
 
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
-use Corals\Modules\Utility\ListOfValue\Policies\ListOfValuePolicy;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Policies\ListOfValuePolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class UtilityAuthServiceProvider extends ServiceProvider

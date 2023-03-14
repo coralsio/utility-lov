@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\database\seeds;
+namespace Corals\Utility\ListOfValue\database\seeds;
 
 use Corals\User\Models\Permission;
 use Illuminate\Database\Seeder;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Http\Requests;
+namespace Corals\Utility\ListOfValue\Http\Requests;
 
 use Corals\Foundation\Http\Requests\BaseRequest;
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Illuminate\Support\Arr;
 
 class ListOfValueRequest extends BaseRequest

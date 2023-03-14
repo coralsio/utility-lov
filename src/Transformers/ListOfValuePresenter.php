@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\ListOfValue\Transformers;
+namespace Corals\Utility\ListOfValue\Transformers;
 
 use Corals\Foundation\Transformers\FractalPresenter;
 

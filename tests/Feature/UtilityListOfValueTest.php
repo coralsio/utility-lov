@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Corals\Modules\Utility\ListOfValue\Models\ListOfValue;
+use Corals\Utility\ListOfValue\Models\ListOfValue;
 use Corals\Settings\Facades\Modules;
 use Corals\User\Models\Role;
 use Corals\User\Models\User;
