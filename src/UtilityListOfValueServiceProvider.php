@@ -23,7 +23,7 @@ class UtilityListOfValueServiceProvider extends BasePackageServiceProvider
 
         $this->mergeConfigFrom(
             __DIR__ . '/config/utility-lov.php',
-            'utility-list_of_value'
+            'utility-lov'
         );
         $this->publishes([
             __DIR__ . '/config/utility-lov.php' => config_path('utility-lov.php'),
