@@ -6,7 +6,7 @@
     "description": "Utility List Of Values",
     "namespace": "Corals\\Utility\\ListOfValue",
     "provider": "UtilityListOfValueServiceProvider",
-    "version": "1.0",
+    "version": "10.0.0",
     "load_order": "0",
     "folder": "utility-listOfValue",
     "icon": "fa fa-list",
