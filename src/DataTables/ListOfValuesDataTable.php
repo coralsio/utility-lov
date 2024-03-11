@@ -87,7 +87,7 @@ class ListOfValuesDataTable extends BaseDataTable
             'parent_id' => [
                 'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'class' => 'col-md-2',
-                'type' => 'select',
+                'type' => 'select2',
                 'options' => ListOfValues::getParents(),
                 'active' => true,
             ],
