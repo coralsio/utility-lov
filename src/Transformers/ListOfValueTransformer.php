@@ -31,6 +31,7 @@ class ListOfValueTransformer extends BaseTransformer
             'status' => formatStatusAsLabels($listOfValue->status),
             'module' => $listOfValue->module ?? '-',
             'parent' => $listOfValue->parent ? Str::limit($listOfValue->parent->value) : '-',
+            'parent_code' => $listOfValue->parent ? $listOfValue->parent->code : '-',
             'hidden' => yesNoFormatter($listOfValue->hidden),
             'created_at' => format_date($listOfValue->created_at),
             'updated_at' => format_date($listOfValue->updated_at),

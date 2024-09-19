@@ -51,6 +51,11 @@ class ListOfValuesDataTable extends BaseDataTable
                 'title' => trans('utility-lov::attributes.listOfValue.parent'),
                 'orderable' => false,
                 'searchable' => false,
+                'exportable' => false,
+            ],
+            'parent_code' => [
+                'title' => trans('utility-lov::attributes.listOfValue.parent_code'),
+                'visible' => false
             ],
             'module' => ['title' => trans('utility-lov::attributes.listOfValue.module')],
             'status' => ['title' => trans('Corals::attributes.status')],
